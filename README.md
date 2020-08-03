@@ -2,7 +2,7 @@
 
 ## EST TIME: 2hrs
 ### Animal class
-- Animal has a name, and a color, stuff_in_belly, and position; hint `Initializer`
+- Animal has a `name`, and a `color`, `stuff_in_belly`, and `position`; hint `Initializer`
 - Animal has the following instance methods : `talk(sound = nil)`, `walk(walk_increment)`, `run(run_increment)`, `feed()`, `is_hungry()`, and `poop()`
 
 ### Dog class
