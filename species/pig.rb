@@ -1,7 +1,7 @@
 require_relative '../animal.rb'
 
 class Pig < Animal
-    def initialize(name, color, filthiness)
+    def initialize(name, color, filthiness=0)
         super(name, color)
         @filthiness = filthiness
     end

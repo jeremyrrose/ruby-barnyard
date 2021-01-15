@@ -10,7 +10,7 @@ require './species/pig'
 # let's make a couple critters
 jeremy = Human.new("Jeremy", "pink")
 trixie = Dog.new("Trixie", "gray")
-pia = Pig.new("Pia", "white", 0)
+pia = Pig.new("Pia", "white")
 fred = Pig.new("Fred", "pink", 2)
 
 # and let's pop into the REPL!
