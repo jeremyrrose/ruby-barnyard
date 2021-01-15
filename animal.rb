@@ -42,7 +42,7 @@ class Animal
             puts "#{self} and #{other} are already friends."
         elsif other.is_a? Animal
             @friends << other
-            other.friends << self
+            other.friends << self unless other.friends.include? self
             puts "#{self} and #{other} are now friends!"
         else
             puts "#{self} cannot be friends with #{other}. #{other} is a #{other.class}."
