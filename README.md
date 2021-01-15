@@ -1,96 +1,44 @@
-# W07-D04-HW
+# Ruby Barnyard
 
-## EST TIME: 2hrs
-### Animal class
-- Animal has a `name`, and a `color`, `stuff_in_belly`, and `position`; hint `Initializer`
-- Animal has the following instance methods : `talk(sound = nil)`, `walk(walk_increment)`, `run(run_increment)`, `feed()`, `is_hungry()`, and `poop()`
+Ahhhh, fresh air! Let's play with animals on a farm.
 
-### Dog class
-- `Dog` class inherit the `Animal` class 
-- `Dog` makes the sound : Bark Bark!; hint `super`
-
-### Sheep class
-- `Sheep` class inherit the `Animal` class 
-- `Sheep` makes the sound : Baaa Baaa; hint `super`
-
-### Pig class
-- `Pig` class inherit the `Animal` class 
-- `Pig` makes the sound Oink Oink; hint `super`
-
+## Animal class
+This activity has a pre-built `Animal` class. You can instantiate a new `Animal` by providing a name and color, like this:
 ```ruby
-# The following code illustrates how to use the classes defined above.
-# It is not necesarrily a part of the solution, and is included for
-# illustration purposes only.
-
-# Create a dog
-dog = Dog.new("Blitzer ", " yellow ")
-
-# Output the dog's attributes
-puts " Our dog 's name is #{dog.name}."
-puts "And he' s #{dog.color}."
-
-# Output some behavior
-puts "Say something, #{dog.name}."
-puts dog.talk
-puts "Go fetch!"
-puts dog.fetch
-
-# Walk the dog
-puts "#{dog.name} is at position #{dog.walk(2)}."
-
-# Run the dog
-puts "#{dog.name} is now at position #{dog.run(4)}"
-
-# Feed the dog
-puts dog.feed
-
-# Is the dog hungry?
-puts dog.is_hungry
-
-# Feed the dog more
-puts dog.feed
-puts dog.feed
-puts dog.is_hungry
-puts dog.feed
-
-puts "==================="
-
-# Create a sheep
-sheep = Sheep.new("Shaun", "white")
-
-# The sheep talks!
-puts sheep.talk
-
-# When the sheep runs, the distance is returned
-puts "#{sheep.name} is at position #{sheep.walk(4)}."
-
-puts "==================="
-
-# Create a pig
-pig = Pig.new("Carl", "pink")
-
-# Pigs love to oink!
-puts pig.talk
+Animal.new("Babar","gray")
 ```
+The `@name` and `@color` will be created as instance variables, along with `@stuff_in_belly` and `@friends`, which are empty arrays.
+>Take a look at the `Animal` class. Can you see a way for an `Animal` to make friends? Is there more than one way?
 
-## Read/Watch: EST TIME: 1hr 
-N/A
+So far, `Animal` has the following instance methods: `talk`, `eat`, `is_hungry?`, and `make_friends`. Every `Animal` will be able to do these things!
 
-## How to submit homework
-### Setup
-- Step 1. Fork the repository
-- Step 2. Clone your fork
-### Submitting work
-- Step 1. Create a folder for the specific homework
-- Step 2. Push to your fork
-- Step 3. Submit a pull request
-- Step 3.1. Add a title (First name, Last Name) and comment
+`Animal` also includes a class variable, `@@all`, and a class method `self.all`.
+>Take a look. What do you think these do?
 
-In the comment section, you must add the following:
-```text
-* Comfortability [0 to 5]
-* Completeness [0 to 5]
-* What was a win?
-* What was a challenge?
-* Any other comments
+## Species!
+So far, `Dog`, `Human`, and `Pig` all inherit from the `Animal` class. That means they can do whatever any `Animal` can do, and maybe more!
+>For each of these classes, what is different from `Animal`?
+
+## Pry time!
+This repo is built to be interactive. Running `ruby main.rb` will load all of these classes, along with some instances, and fire up Pry, Ruby's excellent REPL.
+
+Fire it up! Type `fred` and get to know a friendly `Pig`.
+
+## What can I do here?
+*ANYTHING YOU WANT.*
+
+Pry will allow us to interact with our program's current status. So if you define a new variable in Pry, it'll be there for you in the memory until you type `exit`. You can also make changes in `main.rb` or in any of the classes, then just type `ruby main.rb` to fire it up fresh again. *Experiment!*
+
+Some ideas:
+* Make a new instance of whatever species you like!
+* Can we see all the `Animal`s? Try typing `Animal.all`. Now try typing `puts Animal.all`. Why are these different???
+* Make a new species! How about a `Sheep`? What should a `Sheep` be able to do? How about a `Bull`?
+* Look at the methods defined for `Animal` and for each subclass. Make the animals do stuff! Wallow! Eat! Make friends! Try stuff! Can Fred eat `'a paper bag'`? Can Trixie fetch `'the paper'`? Can Jeremy make friends with `'a fence'` or the integer `17`? Can Trixie eat Pia??? Zoiks!
+* Suppose that Trixie is a very friendly dog. Have her try to make friends with everybody:
+```ruby
+Animal.all.each { |animal| trixie.make_friends(animal) if animal != trixie }
 ```
+* Fred is a very hungry pig. See if he can eat everything in `["slop","corn","garbage","flowers","leaves",jeremy]`.
+* Do whatever! Try to break it.
+
+Happy hacking!
