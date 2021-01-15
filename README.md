@@ -33,7 +33,7 @@ Some ideas:
 * Make a new instance of whatever species you like!
 * Can we see all the `Animal`s? Try typing `Animal.all`. Now try typing `puts Animal.all`. Why are these different???
 * Make a new species! How about a `Sheep`? What should a `Sheep` be able to do? How about a `Bull`?
-* Look at the methods defined for `Animal` and for each subclass. Make the animals do stuff! Wallow! Eat! Make friends! Try stuff! Can Fred eat `'a paper bag'`? Can Trixie fetch `'the paper'`? Can Jeremy make friends with `'a fence'` or the integer `17`? Can Trixie eat Pia??? Zoiks!
+* Look at the methods defined for `Animal` and for each subclass. Make the animals do stuff! Wallow! Eat! Make friends! Try things! Can Fred eat `'a paper bag'`? Can Trixie fetch `'the paper'`? Can Jeremy make friends with `'a fence'` or the integer `17`? Can Trixie eat Pia??? Zoiks!
 * Suppose that Trixie is a very friendly dog. Have her try to make friends with everybody:
 ```ruby
 Animal.all.each { |animal| trixie.make_friends(animal) if animal != trixie }
