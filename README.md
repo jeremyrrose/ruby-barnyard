@@ -42,3 +42,27 @@ Animal.all.each { |animal| trixie.make_friends(animal) if animal != trixie }
 * Do whatever! Try to break it.
 
 Happy hacking!
+
+## Suggested Critters
+
+### `Chicken` class
+New instance variable: `@eggs_layed`
+
+Method `lay_eggs(number_of_eggs)`: Adds `number_of_eggs` to `@eggs_layed` and prints a message using these values.
+
+### `Bull` class
+New instance variables: 
+* `@max_charges` (default = `4`)
+* `@things_charged` (default = `[]`)
+
+Method `charge(item)`: Appends `item` to `@things_charged` and prints `"{ bull's name } has charged { item }. Wow, he's angry!"` If `@things_charged` has more than `max_charges` number of items, print `"{ bull's name } is angry at EVERYTHING. He's very tired now, so instead of charging {item}, he decided to lay down."`
+
+Method `rest(amount)`: Raises `@max_charges` by the `amount` so that the `Bull` can `charge` again!
+>Add an attribute reader so you can see all the things your `Bull` has `charge`d!
+
+### `Sheep` class
+New instance variable: `@shorn` (default=`false`).
+
+Method `talk(sound="Baaah Baaah!")`: Use the inherited `talk` method from `Animal` -- hint: use `super()` -- but if no sound is provided, a `Sheep` will say "Baaah Baaah!"
+
+Method `shear`: If `@shorn` is `false`, prints `"{ sheep name } is now naked, and you have a basket of wool."` and set `shorn` to `true` -- otherwise print `"{ sheep name } has already been shorn!"`
